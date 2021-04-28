@@ -1,6 +1,7 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
-export default function Product() {
+function Product() {
     return (
         <>
         <div>
@@ -15,3 +16,7 @@ export default function Product() {
         </>
     )
 }
+
+Product.propTypes = {}
+
+export default Product;
