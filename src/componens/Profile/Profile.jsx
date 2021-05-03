@@ -1,32 +1,33 @@
 import React from "react";
 import user from "./user.json";
+import css from "./Profile.module.css"
 
 function Profile() {
     return (
-    <div class="profile">
-        <div class="description">
+    <div className={css.profile}>
+        <div className={css.description}>
             <img
                 src={user.avatar}
                 alt="Аватар пользователя"
-                class="avatar"
+                className={css.avatar}
             />
-            <p class="name">{user.name}</p>
-            <p class="tag">{user.tag}</p>
-            <p class="location">{user.location}</p>
+            <p className={css.name}>{user.name}</p>
+            <p className={css.tag}>{user.tag}</p>
+            <p className={css.location}>{user.location}</p>
         </div>
     
-        <ul class="stats">
+        <ul className={css.stats}>
             <li>
-                <span class="label">{user.stats.followers}</span>
-                <span class="quantity">1000</span>
+                <span className={css.label}>Followers</span>
+                <span className={css.quantity}>{user.stats.followers}</span>
             </li>
             <li>
-                <span class="label">{user.stats.views}</span>
-                <span class="quantity">2000</span>
+                <span className={css.label}>Views</span>
+                <span className={css.quantity}>{user.stats.views}</span>
             </li>
             <li>
-                <span class="label">{user.stats.likes}</span>
-                <span class="quantity">3000</span>
+                <span className={css.label}>Likes</span>
+                <span className={css.quantity}>{user.stats.likes}</span>
             </li>
         </ul>
     </div>
