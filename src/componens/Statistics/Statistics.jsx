@@ -1,6 +1,7 @@
 import React from "react";
 import css from "./Statistics.module.css";
 
+
 function Statistics({title, stats}) {
   return (
     <section className={css.statistics}>
@@ -18,7 +19,7 @@ function Statistics({title, stats}) {
       </ul>
     </section>
   );
-}
+};
 
 
 export default Statistics;
