@@ -10,7 +10,7 @@ function Statistics({title, stats}) {
       <ul className={css.statList}>
           {stats.map(element => {
               return(
-                <li className={css.item}>
+                <li className={css.item} key={element.id}>
                  <span className={css.label}>{element.label}</span>
                  <span className={css.percentage}>{element.percentage}</span>
                </li>)
