@@ -1,14 +1,28 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/swiper.scss';
 
-export default () => {
+// Import Swiper styles
+// import 'swiper/swiper.scss';
+// import 'swiper/components/navigation/navigation.scss';
+// import 'swiper/components/pagination/pagination.scss';
+// import 'swiper/components/scrollbar/scrollbar.scss';
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css"
+import "./styles.css";
+import SwiperCore, {
+  Pagination
+} from 'swiper/core';
+SwiperCore.use([Pagination]);
+
+const SwiperOne = () => {
   return (
     <Swiper
       spaceBetween={50}
-      slidesPerView={3}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
@@ -20,3 +34,5 @@ export default () => {
     </Swiper>
   );
 };
+
+export default SwiperOne;
