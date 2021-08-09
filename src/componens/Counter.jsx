@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 
-export default class App extends Component {
-  state = {
+export default class Counter extends Component {
+    state = {
     tasks: [],
-  };
-render() {
+    number:'',
+  }
+  render() {
 	return (
       <div>
-
-
+        {this.state.tasks} / {this.state.number}
 	    </div>
     )
   }
