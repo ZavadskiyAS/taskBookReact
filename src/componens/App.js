@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.module.css';
-import Counter from './Counter';
+import Btn from './Btn';
 
 
 export default function App() {
     return (
       <>
         <div>
-              <Counter/>
+              <Btn/>
         </div>
       </>
     );
